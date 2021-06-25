@@ -1,0 +1,14 @@
+CREATE OR ALTER PROCEDURE dbo.ha_ins_ImmunizationRunXML
+  @XMLIn xml,
+  @Username varchar(12),
+  @OfficeKey int,
+  @LoginKey int
+AS
+BEGIN
+
+  SET NOCOUNT ON;
+  SET XACT_ABORT ON;
+
+  DECLARE @RunID int = @XMLIn.value('(test/@runid)[1]', 'int');
+
+END;
